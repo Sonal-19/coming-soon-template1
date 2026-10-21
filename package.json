@@ -1,0 +1,18 @@
+{
+  "name": "gmc-coming-soon",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "GMC | GenXMeta Corporation - coming soon landing page",
+  "scripts": {
+    "dev": "vite --port 7320 --host",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 7321 --host",
+    "media": "bash scripts/optimize-media.sh",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.1.7"
+  }
+}

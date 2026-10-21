@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>GMC | Coming Soon – GenXMeta Corporation</title>
+    <meta name="description" content="GenXMeta Corporation is preparing something new where wellness, technology and community meet. Meet GNX and MITO C-Care, coming soon." />
+    <meta name="theme-color" content="#fbf6ec" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GMC | GenXMeta Corporation" />
+    <meta property="og:title" content="GMC – Coming Soon" />
+    <meta property="og:description" content="Wellness • Technology • Community. Meet GNX and MITO C-Care, coming soon." />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Critical boot styles: inline so the loader shows before any CSS/JS arrives -->
+    <style>
+      html { background: #fbf6ec; }
+      body { margin: 0; }
+      html:not(.is-ready) body > :not(#boot) { visibility: hidden; }
+      #boot {
+        position: fixed; inset: 0; z-index: 1000;
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+        background: radial-gradient(circle at 50% 45%, #fffdf5 0%, #f8efd9 60%, #efe0bd 100%);
+        transition: opacity .7s cubic-bezier(.22,1,.36,1), visibility .7s;
+      }
+      html.is-ready #boot { opacity: 0; visibility: hidden; }
+      .boot__mark { position: relative; width: 112px; height: 112px; display: grid; place-items: center; }
+      .boot__mark img { width: 52px; height: auto; filter: drop-shadow(0 6px 10px rgba(140,95,30,.3)); }
+      .boot__mark svg { position: absolute; inset: 0; width: 100%; height: 100%; animation: boot-spin 1.6s linear infinite; }
+      .boot__track { fill: none; stroke: rgba(198,146,57,.22); stroke-width: 2; }
+      .boot__arc { fill: none; stroke: url(#boot-gold); stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 80 260; }
+      .boot__name { margin: 0; font: 600 12px/1 Georgia, "Times New Roman", serif; letter-spacing: .34em; text-transform: uppercase; color: #5d3716; }
+      .boot__bar { width: 140px; height: 2px; border-radius: 2px; background: rgba(198,146,57,.2); overflow: hidden; }
+      .boot__bar span { display: block; width: 40%; height: 100%; background: linear-gradient(90deg, #f1d083, #c69239); animation: boot-bar 1.4s ease-in-out infinite; }
+      @keyframes boot-spin { to { transform: rotate(360deg); } }
+      @keyframes boot-bar { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+      @media (prefers-reduced-motion: reduce) { .boot__mark svg, .boot__bar span { animation: none; } }
+    </style>
+    <noscript><style>#boot { display: none; } html:not(.is-ready) body > :not(#boot) { visibility: visible; }</style></noscript>
+    <script>
+      document.documentElement.classList.add("js");
+      // Safety net: never leave visitors on the loader if a script fails.
+      setTimeout(function () { document.documentElement.classList.add("is-ready"); }, 7000);
+    </script>
+  </head>
+  <body>
+    <div id="boot" role="status" aria-label="Loading">
+      <div class="boot__mark">
+        <svg viewBox="0 0 112 112" aria-hidden="true">
+          <defs>
+            <linearGradient id="boot-gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f3d58e" />
+              <stop offset="1" stop-color="#a26f27" />
+            </linearGradient>
+          </defs>
+          <circle class="boot__track" cx="56" cy="56" r="53" />
+          <circle class="boot__arc" cx="56" cy="56" r="53" />
+        </svg>
+        <img src="./assets/coming-soon/web/gmc-icon.webp" alt="" width="320" height="302" />
+      </div>
+      <p class="boot__name">GenXMeta Corporation</p>
+      <div class="boot__bar" aria-hidden="true"><span></span></div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="backdrop" aria-hidden="true">
+      <div class="backdrop__grid"></div>
+      <div class="backdrop__glow backdrop__glow--a"></div>
+      <div class="backdrop__glow backdrop__glow--b"></div>
+      <svg class="backdrop__rings" viewBox="0 0 600 600">
+        <circle cx="300" cy="300" r="296" />
+        <circle cx="300" cy="300" r="250" class="dash" />
+        <circle cx="300" cy="300" r="210" />
+        <circle cx="300" cy="300" r="150" />
+      </svg>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <!-- ───────────── Entry gate ───────────── -->
+    <div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Welcome to GMC">
+      <div class="gate__rings" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <i class="gate__orbit"></i>
+      </div>
+      <img class="gate__logo" src="./assets/coming-soon/web/gmc-logo.webp" alt="GMC – GenXMeta Corporation" width="1000" height="509" />
+      <button class="gate__enter" type="button" id="gate-enter">
+        <span>Enter</span>
+      </button>
+      <p class="gate__hint">Sound on for the full experience</p>
+    </div>
+
+    <!-- ───────────── Header ───────────── -->
+    <header class="site-header" id="top">
+      <a class="brand" href="#main" aria-label="GMC home">
+        <img src="./assets/coming-soon/web/gmc-logo.webp" alt="GMC – GenXMeta Corporation" width="1000" height="509" />
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#previews">Previews</a>
+        <a href="#reels">Teasers</a>
+        <a href="#vision">What's coming</a>
+      </nav>
+      <a class="btn btn--small btn--gold" href="#notify">Stay updated</a>
+    </header>
+
+    <main id="main">
+      <!-- ───────────── Hero ───────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <p class="pill reveal"><span class="pill__dot"></span> <span id="launch-label">Launching soon</span></p>
+          <h1 class="hero__title reveal" id="hero-title">
+            <span class="gold-text">Coming</span>
+            <span class="gold-text">Soon</span>
+          </h1>
+          <p class="hero__kicker reveal"><span class="rule"></span>The GMC Experience<span class="rule"></span></p>
+          <p class="hero__lead reveal">
+            GenXMeta Corporation is putting the finishing touches on something new, where
+            wellness, technology and community meet. Here's a first look.
+          </p>
+
+          <div class="countdown reveal" id="countdown" hidden>
+            <div><strong data-unit="d">00</strong><span>Days</span></div>
+            <div><strong data-unit="h">00</strong><span>Hours</span></div>
+            <div><strong data-unit="m">00</strong><span>Minutes</span></div>
+            <div><strong data-unit="s">00</strong><span>Seconds</span></div>
+          </div>
+          <ul class="tags reveal" id="tags">
+            <li>Wellness</li>
+            <li>Technology</li>
+            <li>Community</li>
+          </ul>
+
+          <div class="hero__ctas reveal">
+            <button class="btn btn--gold" type="button" id="play-teaser">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" /></svg>
+              Watch the teaser
+            </button>
+            <a class="btn btn--ghost" href="#previews">See the previews</a>
+          </div>
+        </div>
+
+        <div class="hero__stage reveal" data-tilt>
+          <div class="halo" aria-hidden="true"></div>
+          <div class="phone">
+            <video
+              class="phone__video"
+              id="hero-video"
+              src="./assets/coming-soon/video1.mp4"
+              poster="./assets/coming-soon/web/video1.webp"
+              muted
+              loop
+              playsinline
+              preload="auto"
+              aria-label="The GMC Experience teaser"
+            ></video>
+            <button class="icon-btn phone__sound" type="button" data-sound aria-label="Turn sound on" aria-pressed="false">
+              <svg class="i-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M17 9l4 6M21 9l-4 6" /></svg>
+              <svg class="i-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg>
+            </button>
+            <div class="progress" aria-hidden="true"><span></span></div>
+          </div>
+          <div class="float-card float-card--a" aria-hidden="true">
+            <small>Wellness</small>
+            <strong>MITO C-Care</strong>
+          </div>
+          <div class="float-card float-card--b" aria-hidden="true">
+            <img src="./assets/coming-soon/web/gmc-icon.webp" alt="" width="320" height="302" />
+            <div><small>Token</small><strong>GNX</strong></div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#previews" aria-label="Scroll to previews"><span></span></a>
+      </section>
+
+      <!-- ───────────── Marquee ───────────── -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>GNX Token</span><i>✦</i><span>MITO C-Care</span><i>✦</i><span>Lifetime Rewards</span><i>✦</i><span>Ranks</span><i>✦</i><span>Staking</span><i>✦</i><span>Exchange Vision</span><i>✦</i><span>Community</span><i>✦</i>
+          <span>GNX Token</span><i>✦</i><span>MITO C-Care</span><i>✦</i><span>Lifetime Rewards</span><i>✦</i><span>Ranks</span><i>✦</i><span>Staking</span><i>✦</i><span>Exchange Vision</span><i>✦</i><span>Community</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- ───────────── Posters ───────────── -->
+      <section class="section" id="previews" aria-labelledby="previews-title">
+        <div class="section__head reveal">
+          <p class="eyebrow">The previews</p>
+          <h2 id="previews-title">Four glimpses of what's next</h2>
+          <p>Tap any poster to view it full size.</p>
+        </div>
+
+        <div class="rail" id="poster-rail">
+          <button class="poster reveal" type="button" data-index="0" data-tilt>
+            <span class="poster__frame">
+              <img
+                src="./assets/coming-soon/web/poster1-sm.webp"
+                srcset="./assets/coming-soon/web/poster1-sm.webp 640w, ./assets/coming-soon/web/poster1.webp 1280w"
+                sizes="(min-width: 1100px) 24vw, (min-width: 720px) 45vw, 76vw"
+                width="640" height="800" loading="lazy" decoding="async"
+                alt="Coming Soon poster: The GMC Experience, with the GNX coin and MITO C-Care"
+              />
+              <span class="poster__shine" aria-hidden="true"></span>
+            </span>
+            <span class="poster__meta"><em>01</em><span><strong>The GMC Experience</strong><small>Wellness • Technology • Community</small></span></span>
+          </button>
+          <button class="poster reveal" type="button" data-index="1" data-tilt>
+            <span class="poster__frame">
+              <img
+                src="./assets/coming-soon/web/poster2-sm.webp"
+                srcset="./assets/coming-soon/web/poster2-sm.webp 640w, ./assets/coming-soon/web/poster2.webp 1280w"
+                sizes="(min-width: 1100px) 24vw, (min-width: 720px) 45vw, 76vw"
+                width="640" height="800" loading="lazy" decoding="async"
+                alt="Coming Soon poster: Meet GNX – discover the GNX vision"
+              />
+              <span class="poster__shine" aria-hidden="true"></span>
+            </span>
+            <span class="poster__meta"><em>02</em><span><strong>Meet GNX</strong><small>Utility • Ecosystem • Roadmap</small></span></span>
+          </button>
+          <button class="poster reveal" type="button" data-index="2" data-tilt>
+            <span class="poster__frame">
+              <img
+                src="./assets/coming-soon/web/poster3-sm.webp"
+                srcset="./assets/coming-soon/web/poster3-sm.webp 640w, ./assets/coming-soon/web/poster3.webp 1280w"
+                sizes="(min-width: 1100px) 24vw, (min-width: 720px) 45vw, 76vw"
+                width="640" height="800" loading="lazy" decoding="async"
+                alt="Coming Soon poster: Discover the GMC Journey – lifetime rewards, ranks, matching income and staking"
+              />
+              <span class="poster__shine" aria-hidden="true"></span>
+            </span>
+            <span class="poster__meta"><em>03</em><span><strong>The GMC Journey</strong><small>Rewards • Ranks • Staking</small></span></span>
+          </button>
+          <button class="poster reveal" type="button" data-index="3" data-tilt>
+            <span class="poster__frame">
+              <img
+                src="./assets/coming-soon/web/poster4-sm.webp"
+                srcset="./assets/coming-soon/web/poster4-sm.webp 640w, ./assets/coming-soon/web/poster4.webp 1280w"
+                sizes="(min-width: 1100px) 24vw, (min-width: 720px) 45vw, 76vw"
+                width="640" height="800" loading="lazy" decoding="async"
+                alt="Coming Soon poster: A glimpse of what's next – the GNX exchange concept on desktop and mobile"
+              />
+              <span class="poster__shine" aria-hidden="true"></span>
+            </span>
+            <span class="poster__meta"><em>04</em><span><strong>What's Next</strong><small>The exchange vision</small></span></span>
+          </button>
+        </div>
+        <div class="rail-nav" data-rail="poster-rail">
+          <button class="icon-btn" type="button" data-dir="-1" aria-label="Previous poster">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+          </button>
+          <div class="dots" aria-hidden="true"></div>
+          <button class="icon-btn" type="button" data-dir="1" aria-label="Next poster">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ───────────── Reels ───────────── -->
+      <section class="section section--deep" id="reels" aria-labelledby="reels-title">
+        <div class="section__head reveal">
+          <p class="eyebrow">The teasers</p>
+          <h2 id="reels-title">Ten seconds each. Worth every one.</h2>
+          <p>They play as you scroll. Tap a teaser to pause it, or use the speaker for sound.</p>
+        </div>
+
+        <div class="rail rail--reels" id="reel-rail">
+          <article class="reel reveal">
+            <div class="reel__frame">
+              <video src="./assets/coming-soon/video1.mp4" poster="./assets/coming-soon/web/video1.webp" muted loop playsinline preload="none" aria-label="Teaser: The GMC Experience"></video>
+              <button class="icon-btn reel__sound" type="button" data-sound aria-label="Turn sound on" aria-pressed="false">
+                <svg class="i-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M17 9l4 6M21 9l-4 6" /></svg>
+                <svg class="i-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg>
+              </button>
+              <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" /></svg></span>
+              <div class="progress" aria-hidden="true"><span></span></div>
+            </div>
+            <h3><em>01</em> The GMC Experience</h3>
+            <p>Step inside, and discover MITO C-Care.</p>
+          </article>
+          <article class="reel reveal">
+            <div class="reel__frame">
+              <video src="./assets/coming-soon/video2.mp4" poster="./assets/coming-soon/web/video2.webp" muted loop playsinline preload="none" aria-label="Teaser: GNX Token"></video>
+              <button class="icon-btn reel__sound" type="button" data-sound aria-label="Turn sound on" aria-pressed="false">
+                <svg class="i-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M17 9l4 6M21 9l-4 6" /></svg>
+                <svg class="i-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg>
+              </button>
+              <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" /></svg></span>
+              <div class="progress" aria-hidden="true"><span></span></div>
+            </div>
+            <h3><em>02</em> GNX Token</h3>
+            <p>Forged in gold. Discover the GNX vision.</p>
+          </article>
+          <article class="reel reveal">
+            <div class="reel__frame">
+              <video src="./assets/coming-soon/video3.mp4" poster="./assets/coming-soon/web/video3.webp" muted loop playsinline preload="none" aria-label="Teaser: The exchange vision"></video>
+              <button class="icon-btn reel__sound" type="button" data-sound aria-label="Turn sound on" aria-pressed="false">
+                <svg class="i-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M17 9l4 6M21 9l-4 6" /></svg>
+                <svg class="i-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg>
+              </button>
+              <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" /></svg></span>
+              <div class="progress" aria-hidden="true"><span></span></div>
+            </div>
+            <h3><em>03</em> The Exchange Vision</h3>
+            <p>A concept preview: utility, ecosystem, roadmap.</p>
+          </article>
+        </div>
+        <div class="rail-nav rail-nav--light" data-rail="reel-rail">
+          <button class="icon-btn" type="button" data-dir="-1" aria-label="Previous teaser">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+          </button>
+          <div class="dots" aria-hidden="true"></div>
+          <button class="icon-btn" type="button" data-dir="1" aria-label="Next teaser">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ───────────── What's coming ───────────── -->
+      <section class="section" id="vision" aria-labelledby="vision-title">
+        <div class="section__head reveal">
+          <p class="eyebrow">What's coming</p>
+          <h2 id="vision-title">One platform, four doors</h2>
+        </div>
+        <div class="pillars">
+          <article class="pillar reveal">
+            <span class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21c-4.5-2.4-7-6-7-10.2C5 7 8 4 12 3c4 1 7 4 7 7.8 0 4.2-2.5 7.8-7 10.2z" /><path d="M12 7v10M9 11l3 2 3-2" /></svg>
+            </span>
+            <h3>Wellness</h3>
+            <p><strong>MITO C-Care</strong>: an L-Ergothioneine nutraceutical for mitochondrial support and brain health.</p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="5.5" /><path d="M10 10.2h3.2a1.4 1.4 0 0 1 0 2.8H10V10.2zm0 2.8h3.6a1.4 1.4 0 0 1 0 2.8H10V13z" /></svg>
+            </span>
+            <h3>GNX Token</h3>
+            <p>Global Network Exchange, powered by innovation and driven by value. A full overview is on its way.</p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" /><circle cx="17" cy="9.5" r="2.3" /><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5M14.5 14.6c.8-.4 1.6-.6 2.5-.6 2.2 0 3.8 1.4 4.3 4" /></svg>
+            </span>
+            <h3>The GMC Journey</h3>
+            <p>Lifetime rewards, ranks, matching income and staking. Programme details will be announced.</p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="1.5" /><path d="M8 20h8M12 16.5V20M6.5 13l3-3.2 2.6 2 4.4-4.6" /></svg>
+            </span>
+            <h3>The Exchange</h3>
+            <p>Markets, wallet and trading on desktop and mobile. The interface shown is a concept preview.</p>
+          </article>
+        </div>
+        <p class="fineprint reveal">Eligibility and terms apply. No income is guaranteed. Visuals are illustrative and features are subject to confirmation.</p>
+      </section>
+
+      <!-- ───────────── Notify / share ───────────── -->
+      <section class="section section--tight" id="notify" aria-labelledby="notify-title">
+        <div class="notify reveal">
+          <img class="notify__icon" src="./assets/coming-soon/web/gmc-icon.webp" alt="" width="320" height="302" loading="lazy" />
+          <p class="eyebrow">Almost there</p>
+          <h2 id="notify-title">Be first through the door</h2>
+          <p class="notify__text" id="notify-text">
+            We're in the final stretch. Check back soon for the full launch of the GMC platform.
+          </p>
+
+          <form class="notify__form" id="notify-form" hidden novalidate>
+            <label class="sr-only" for="notify-email">Email address</label>
+            <input id="notify-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required />
+            <button class="btn btn--gold" type="submit">Notify me</button>
+          </form>
+          <p class="notify__status" id="notify-status" role="status" aria-live="polite"></p>
+
+          <button class="btn btn--ghost" type="button" id="share-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5" /><circle cx="6" cy="12" r="2.5" /><circle cx="18" cy="18.5" r="2.5" /><path d="M8.2 10.8l7.6-4.1M8.2 13.2l7.6 4.1" /></svg>
+            <span>Share the news</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="./assets/coming-soon/web/gmc-logo.webp" alt="GMC – GenXMeta Corporation" width="1000" height="509" loading="lazy" />
+      <p>© <span id="year">2026</span> GenXMeta Corporation. All rights reserved.</p>
+    </footer>
+
+    <!-- ───────────── Lightbox ───────────── -->
+    <dialog class="lightbox" id="lightbox" aria-label="Poster viewer">
+      <div class="lightbox__inner">
+        <button class="icon-btn lightbox__close" type="button" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+        <button class="icon-btn lightbox__prev" type="button" data-step="-1" aria-label="Previous poster">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+        </button>
+        <figure>
+          <img id="lightbox-img" alt="" width="1280" height="1600" />
+          <figcaption><span id="lightbox-count">1 / 4</span><strong id="lightbox-title"></strong></figcaption>
+        </figure>
+        <button class="icon-btn lightbox__next" type="button" data-step="1" aria-label="Next poster">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+        </button>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
