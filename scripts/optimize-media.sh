@@ -31,8 +31,7 @@ ffmpeg -v error -y -i "$ROOT/assets/gmc-icon.png" -vf "scale=320:-2" -c:v libweb
 # Fixed-path files served from the site root (public/)
 PUB="$ROOT/public"
 mkdir -p "$PUB"
-cp "$ROOT/assets/favicon.ico" "$PUB/favicon.ico"
-ffmpeg -v error -y -i "$ROOT/assets/gmc-icon.png" -vf "scale=180:-2" "$PUB/apple-touch-icon.png"
+# (favicons + app icons in public/ are hand-made from assets/gmc-icon.png and left alone here)
 # Social share image (1200x630): poster 1 on an ivory canvas
 ffmpeg -v error -y -f lavfi -i "color=c=0xfaf3e3:s=1200x630" -i "$SRC/poster1.jpeg" \
   -filter_complex "[1:v]scale=-2:630[p];[0:v][p]overlay=(W-w)/2:0" -frames:v 1 -q:v 3 "$PUB/og-image.jpg"

@@ -55,19 +55,27 @@ To swap a poster or video, replace the file with the same name and run `npm run 
 
 `dist/` is plain static files that any host can serve (nginx, Cloudflare Pages, Netlify…).
 
-**Same server as the dApp (nginx over rsync):**
+**beta.genxmeta.io (one command):**
 
 ```bash
-REMOTE=root@php REMOTE_DIR=/var/www/<folder-nginx-serves> bash scripts/deploy.sh
+bun run deploy    # or: npm run deploy
 ```
 
-When the dApp is ready, point nginx back at the dApp's front-end folder (or deploy the dApp over it).
+This builds the page and rsyncs `dist/` to `php:/var/www/gmc/beta`, the folder nginx serves for
+https://beta.genxmeta.io. The live dApp at genxmeta.io (`/var/www/gmc/front-end`) is never touched,
+and the script refuses to deploy there.
 
-Recommended nginx cache rule (files in `static/` are content-hashed):
+One-time setup on your machine: Tailscale on and signed in to the **ravionline333** tailnet, and this
+in `~/.ssh/config`:
 
-```nginx
-location /static/ { expires 1y; add_header Cache-Control "public, immutable"; }
-location = /index.html { add_header Cache-Control "no-cache"; }
 ```
+Host php
+  HostName srv1753994
+  User root
+  HostKeyAlias php
+```
+
+On the server, the nginx site is `/etc/nginx/conf.d/beta.genxmeta.io.conf` (Let's Encrypt SSL via
+certbot, auto-renewing). DNS is an `A beta → 168.231.114.8` record in Cloudflare, proxied.
 
 **Cloudflare Pages:** build command `npm run build`, output directory `dist`.
